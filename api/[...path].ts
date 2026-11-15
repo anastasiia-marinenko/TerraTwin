@@ -1,4 +1,9 @@
-import app from "../artifacts/api-server/src/app";
+// @ts-nocheck
+// Це лише тонка обгортка. Сам Express-застосунок збирається окремо командою
+// `pnpm --filter @workspace/api-server build:vercel` (див. vercel.json → buildCommand)
+// у готовий файл artifacts/api-server/dist/vercel/app.cjs.
+import appModule from "../artifacts/api-server/dist/vercel/app.cjs";
 
-// Vercel routes /api/* requests through this serverless Express handler.
+const app = appModule.default ?? appModule;
+
 export default app;

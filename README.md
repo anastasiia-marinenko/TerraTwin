@@ -1,6 +1,7 @@
 # TerraTwin — Project Earth2Mars
 
-**NASA Space Apps Challenge 2026 | Identify Earth Locations that Analog the Permanent Moon Base Locations and Mars**
+**NASA Space Apps Challenge 2026
+Identify Earth Locations that Analog the Permanent Moon Base Locations and Mars**
 
 TerraTwin is an interactive field atlas for studying terrestrial analogs of lunar and Martian sites. Pick a planetary
 target (Shackleton Crater, Malapert Massif, Taurus–Littrow Valley, Jezero Crater, Gale Crater), explore thirteen Earth

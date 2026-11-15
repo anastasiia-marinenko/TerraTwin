@@ -1,0 +1,191 @@
+{
+  "status": "computed",
+  "generatedAt": "2026-11-15T15:30:39+00:00",
+  "spacingMeters": 500.0,
+  "gridSize": 5,
+  "method": "5x5 grid with 500 m spacing around each point (azimuthal equidistant projection); slope from central differences (baseline 2x spacing) in the 9 interior cells; grid values by bilinear interpolation of each DEM. Identical method for every body.",
+  "targets": {
+    "moon-shackleton": {
+      "validSamples": 25,
+      "meanElevationMeters": 626.57,
+      "reliefMeters": 1072.27,
+      "elevationStdDevMeters": 276.4,
+      "meanSlopeDegrees": 21.747,
+      "dataset": "LRO LOLA global DEM, 118 m/pixel (USGS Astrogeology)",
+      "datasetUrl": "https://astrogeology.usgs.gov/search/map/moon_lro_lola_dem_118m",
+      "nativeResolutionMeters": 118
+    },
+    "moon-malapert": {
+      "validSamples": 25,
+      "meanElevationMeters": 4831.45,
+      "reliefMeters": 406.66,
+      "elevationStdDevMeters": 123.03,
+      "meanSlopeDegrees": 10.179,
+      "dataset": "LRO LOLA global DEM, 118 m/pixel (USGS Astrogeology)",
+      "datasetUrl": "https://astrogeology.usgs.gov/search/map/moon_lro_lola_dem_118m",
+      "nativeResolutionMeters": 118
+    },
+    "moon-taurus-littrow": {
+      "validSamples": 25,
+      "meanElevationMeters": -2627.33,
+      "reliefMeters": 55.7,
+      "elevationStdDevMeters": 15.21,
+      "meanSlopeDegrees": 1.31,
+      "dataset": "LRO LOLA global DEM, 118 m/pixel (USGS Astrogeology)",
+      "datasetUrl": "https://astrogeology.usgs.gov/search/map/moon_lro_lola_dem_118m",
+      "nativeResolutionMeters": 118
+    },
+    "mars-jezero": {
+      "validSamples": 25,
+      "meanElevationMeters": -2567.07,
+      "reliefMeters": 53.85,
+      "elevationStdDevMeters": 12.19,
+      "meanSlopeDegrees": 0.914,
+      "dataset": "MGS MOLA global DEM, 463 m/pixel (USGS Astrogeology)",
+      "datasetUrl": "https://astrogeology.usgs.gov/search/map/mars_mgs_mola_dem_463m",
+      "nativeResolutionMeters": 463
+    },
+    "mars-gale": {
+      "validSamples": 25,
+      "meanElevationMeters": -1097.41,
+      "reliefMeters": 1484.96,
+      "elevationStdDevMeters": 394.87,
+      "meanSlopeDegrees": 29.469,
+      "dataset": "MGS MOLA global DEM, 463 m/pixel (USGS Astrogeology)",
+      "datasetUrl": "https://astrogeology.usgs.gov/search/map/mars_mgs_mola_dem_463m",
+      "nativeResolutionMeters": 463
+    }
+  },
+  "earth": {
+    "atacama": {
+      "validSamples": 25,
+      "meanElevationMeters": 2651.84,
+      "reliefMeters": 217.0,
+      "elevationStdDevMeters": 55.62,
+      "meanSlopeDegrees": 4.311,
+      "dataset": "SRTM GL1 v003, 30 m (NASA/USGS) via Open Topo Data",
+      "datasetUrl": "https://lpdaac.usgs.gov/products/srtmgl1v003/",
+      "nativeResolutionMeters": 30
+    },
+    "mcmurdo-dry-valleys": {
+      "validSamples": 25,
+      "meanElevationMeters": 733.72,
+      "reliefMeters": 308.0,
+      "elevationStdDevMeters": 97.09,
+      "meanSlopeDegrees": 8.668,
+      "dataset": "ASTER GDEM v3, 30 m (NASA/METI) via Open Topo Data",
+      "datasetUrl": "https://lpdaac.usgs.gov/products/astgtmv003/",
+      "nativeResolutionMeters": 30
+    },
+    "iceland-highlands": {
+      "validSamples": 25,
+      "meanElevationMeters": 1320.92,
+      "reliefMeters": 163.0,
+      "elevationStdDevMeters": 44.04,
+      "meanSlopeDegrees": 3.498,
+      "dataset": "ASTER GDEM v3, 30 m (NASA/METI) via Open Topo Data",
+      "datasetUrl": "https://lpdaac.usgs.gov/products/astgtmv003/",
+      "nativeResolutionMeters": 30
+    },
+    "mauna-kea": {
+      "validSamples": 25,
+      "meanElevationMeters": 4011.0,
+      "reliefMeters": 253.0,
+      "elevationStdDevMeters": 72.21,
+      "meanSlopeDegrees": 8.418,
+      "dataset": "SRTM GL1 v003, 30 m (NASA/USGS) via Open Topo Data",
+      "datasetUrl": "https://lpdaac.usgs.gov/products/srtmgl1v003/",
+      "nativeResolutionMeters": 30
+    },
+    "mojave": {
+      "validSamples": 25,
+      "meanElevationMeters": 552.08,
+      "reliefMeters": 9.0,
+      "elevationStdDevMeters": 2.21,
+      "meanSlopeDegrees": 0.175,
+      "dataset": "SRTM GL1 v003, 30 m (NASA/USGS) via Open Topo Data",
+      "datasetUrl": "https://lpdaac.usgs.gov/products/srtmgl1v003/",
+      "nativeResolutionMeters": 30
+    },
+    "death-valley": {
+      "validSamples": 25,
+      "meanElevationMeters": -82.0,
+      "reliefMeters": 8.0,
+      "elevationStdDevMeters": 1.47,
+      "meanSlopeDegrees": 0.19,
+      "dataset": "SRTM GL1 v003, 30 m (NASA/USGS) via Open Topo Data",
+      "datasetUrl": "https://lpdaac.usgs.gov/products/srtmgl1v003/",
+      "nativeResolutionMeters": 30
+    },
+    "haughton": {
+      "validSamples": 25,
+      "meanElevationMeters": 161.24,
+      "reliefMeters": 62.0,
+      "elevationStdDevMeters": 16.09,
+      "meanSlopeDegrees": 1.655,
+      "dataset": "ASTER GDEM v3, 30 m (NASA/METI) via Open Topo Data",
+      "datasetUrl": "https://lpdaac.usgs.gov/products/astgtmv003/",
+      "nativeResolutionMeters": 30
+    },
+    "danakil": {
+      "validSamples": 25,
+      "meanElevationMeters": -100.72,
+      "reliefMeters": 44.0,
+      "elevationStdDevMeters": 13.28,
+      "meanSlopeDegrees": 1.295,
+      "dataset": "SRTM GL1 v003, 30 m (NASA/USGS) via Open Topo Data",
+      "datasetUrl": "https://lpdaac.usgs.gov/products/srtmgl1v003/",
+      "nativeResolutionMeters": 30
+    },
+    "makhtesh-ramon": {
+      "validSamples": 25,
+      "meanElevationMeters": 682.36,
+      "reliefMeters": 331.0,
+      "elevationStdDevMeters": 119.33,
+      "meanSlopeDegrees": 10.862,
+      "dataset": "SRTM GL1 v003, 30 m (NASA/USGS) via Open Topo Data",
+      "datasetUrl": "https://lpdaac.usgs.gov/products/srtmgl1v003/",
+      "nativeResolutionMeters": 30
+    },
+    "ladakh": {
+      "validSamples": 25,
+      "meanElevationMeters": 3853.56,
+      "reliefMeters": 282.0,
+      "elevationStdDevMeters": 83.51,
+      "meanSlopeDegrees": 8.038,
+      "dataset": "SRTM GL1 v003, 30 m (NASA/USGS) via Open Topo Data",
+      "datasetUrl": "https://lpdaac.usgs.gov/products/srtmgl1v003/",
+      "nativeResolutionMeters": 30
+    },
+    "namib": {
+      "validSamples": 25,
+      "meanElevationMeters": 398.16,
+      "reliefMeters": 53.0,
+      "elevationStdDevMeters": 13.27,
+      "meanSlopeDegrees": 1.286,
+      "dataset": "SRTM GL1 v003, 30 m (NASA/USGS) via Open Topo Data",
+      "datasetUrl": "https://lpdaac.usgs.gov/products/srtmgl1v003/",
+      "nativeResolutionMeters": 30
+    },
+    "qaidam": {
+      "validSamples": 25,
+      "meanElevationMeters": 2682.24,
+      "reliefMeters": 8.0,
+      "elevationStdDevMeters": 1.58,
+      "meanSlopeDegrees": 0.157,
+      "dataset": "SRTM GL1 v003, 30 m (NASA/USGS) via Open Topo Data",
+      "datasetUrl": "https://lpdaac.usgs.gov/products/srtmgl1v003/",
+      "nativeResolutionMeters": 30
+    },
+    "alvord": {
+      "validSamples": 25,
+      "meanElevationMeters": 1221.88,
+      "reliefMeters": 17.0,
+      "elevationStdDevMeters": 3.68,
+      "meanSlopeDegrees": 0.415,
+      "dataset": "SRTM GL1 v003, 30 m (NASA/USGS) via Open Topo Data",
+      "datasetUrl": "https://lpdaac.usgs.gov/products/srtmgl1v003/",
+      "nativeResolutionMeters": 30
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm --filter @workspace/terra-lunar-atlas build",
+  "outputDirectory": "artifacts/terra-lunar-atlas/dist/public",
+  "functions": {
+    "api/[...path].ts": {
+      "maxDuration": 60
+    }
+  }
+}

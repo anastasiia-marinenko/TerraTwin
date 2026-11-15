@@ -1,0 +1,144 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /terrain/profile:
+    get:
+      operationId: getTerrainProfile
+      tags: [terrain]
+      summary: Measure a local Earth terrain profile
+      description: Samples a 5 by 5 neighbourhood from the public SRTM 30 m elevation dataset and derives descriptive terrain statistics.
+      parameters:
+        - in: query
+          name: latitude
+          required: true
+          schema:
+            type: number
+            minimum: -90
+            maximum: 90
+        - in: query
+          name: longitude
+          required: true
+          schema:
+            type: number
+            minimum: -180
+            maximum: 180
+        - in: query
+          name: spacingMeters
+          required: false
+          schema:
+            type: integer
+            minimum: 30
+            maximum: 300
+            default: 30
+      responses:
+        "200":
+          description: SRTM measurements and statistics for the sampled window
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TerrainProfileResponse"
+        "400":
+          description: Coordinates or sample spacing are invalid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TerrainProfileError"
+        "502":
+          description: The elevation data service did not return a usable profile
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TerrainProfileError"
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+    TerrainProfileResponse:
+      type: object
+      properties:
+        latitude:
+          type: number
+        longitude:
+          type: number
+        spacingMeters:
+          type: integer
+        gridSize:
+          type: integer
+        sampleCount:
+          type: integer
+        validSampleCount:
+          type: integer
+        minimumElevationMeters:
+          type: number
+        maximumElevationMeters:
+          type: number
+        meanElevationMeters:
+          type: number
+        reliefMeters:
+          type: number
+        elevationStdDevMeters:
+          type: number
+        meanSlopeDegrees:
+          type: number
+        source:
+          type: string
+        sourceUrl:
+          type: string
+        sourceResolutionMeters:
+          type: integer
+        sampledAt:
+          type: string
+          format: date-time
+      required:
+        - latitude
+        - longitude
+        - spacingMeters
+        - gridSize
+        - sampleCount
+        - validSampleCount
+        - minimumElevationMeters
+        - maximumElevationMeters
+        - meanElevationMeters
+        - reliefMeters
+        - elevationStdDevMeters
+        - meanSlopeDegrees
+        - source
+        - sourceUrl
+        - sourceResolutionMeters
+        - sampledAt
+    TerrainProfileError:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
+

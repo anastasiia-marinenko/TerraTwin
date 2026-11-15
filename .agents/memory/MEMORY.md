@@ -1,0 +1,1 @@
+- [Analogue evidence](analogue-evidence.md) — distinguish live data from catalog links; avoid cross-world similarity claims without validated comparable measurements.

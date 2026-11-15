@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Terra Lunar Atlas"
+description = "An interactive science atlas for comparing real Earth environments with lunar and Martian terrain using NASA and partner-agency observations, source-linked imagery, and transparent similarity analysis."
+version = "1.0.0"
+id = "artifacts/terra-lunar-atlas"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24023
+
+[services.development]
+run = "pnpm --filter @workspace/terra-lunar-atlas run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/terra-lunar-atlas", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/terra-lunar-atlas/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24023"
+BASE_PATH = "/"
